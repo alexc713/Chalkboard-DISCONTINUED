@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Login
+Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,13 +22,14 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnAdmin = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblUsername
@@ -81,11 +82,21 @@ Partial Class Login
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'Login
+        'btnAdmin
+        '
+        Me.btnAdmin.Location = New System.Drawing.Point(559, 395)
+        Me.btnAdmin.Name = "btnAdmin"
+        Me.btnAdmin.Size = New System.Drawing.Size(150, 50)
+        Me.btnAdmin.TabIndex = 6
+        Me.btnAdmin.Text = "Admin"
+        Me.btnAdmin.UseVisualStyleBackColor = True
+        '
+        'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(721, 457)
+        Me.Controls.Add(Me.btnAdmin)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.TextBox2)
@@ -93,7 +104,7 @@ Partial Class Login
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblUsername)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Login"
+        Me.Name = "Form1"
         Me.Text = "Chalkboard"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -106,4 +117,5 @@ Partial Class Login
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnExit As Button
+    Friend WithEvents btnAdmin As Button
 End Class
