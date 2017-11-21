@@ -25,11 +25,12 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.btnAdmin = New System.Windows.Forms.Button()
+        Me.btnRegister = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblUsername
@@ -50,19 +51,20 @@ Partial Class Form1
         Me.lblPassword.TabIndex = 1
         Me.lblPassword.Text = "Password:"
         '
-        'TextBox1
+        'txtUsername
         '
-        Me.TextBox1.Location = New System.Drawing.Point(253, 121)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(233, 29)
-        Me.TextBox1.TabIndex = 2
+        Me.txtUsername.Location = New System.Drawing.Point(253, 121)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(233, 29)
+        Me.txtUsername.TabIndex = 2
         '
-        'TextBox2
+        'txtPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(253, 187)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(233, 29)
-        Me.TextBox2.TabIndex = 3
+        Me.txtPassword.Location = New System.Drawing.Point(253, 187)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(233, 29)
+        Me.txtPassword.TabIndex = 3
         '
         'btnLogin
         '
@@ -91,16 +93,26 @@ Partial Class Form1
         Me.btnAdmin.Text = "Admin"
         Me.btnAdmin.UseVisualStyleBackColor = True
         '
+        'btnRegister
+        '
+        Me.btnRegister.Location = New System.Drawing.Point(559, 187)
+        Me.btnRegister.Name = "btnRegister"
+        Me.btnRegister.Size = New System.Drawing.Size(150, 50)
+        Me.btnRegister.TabIndex = 7
+        Me.btnRegister.Text = "Register"
+        Me.btnRegister.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(721, 457)
+        Me.Controls.Add(Me.btnRegister)
         Me.Controls.Add(Me.btnAdmin)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogin)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.lblUsername)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -113,9 +125,10 @@ Partial Class Form1
 
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblPassword As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnExit As Button
     Friend WithEvents btnAdmin As Button
+    Friend WithEvents btnRegister As Button
 End Class
